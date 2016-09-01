@@ -1,0 +1,23 @@
+<ion-view>
+    <ion-content>
+        <div style="text-align:center;">
+            <div>{{thingFromConfig}}</div>
+            <div>{{artist}}</div>
+            <div>{{getArtist2}}</div>
+            <button ng-click="playPause()">播放/暂停</button>
+            <button ng-click="makeBig()">大</button>
+            <button ng-click="makeNormal()">中</button>
+            <button ng-click="makeSmall()">小</button>
+            <br/>
+            <video id="video1" width="420" style="margin-top:15px;">
+                <source src="audio/mov_bbb.mp4" type="video/mp4"/>
+                <source src="audio/mov_bbb.ogg" type="video/ogg"/>
+                你的浏览器不支持h5 video
+            </video>
+        </div>
+    </ion-content>
+</ion-view>
+<!DOCTYPE html>
+<html>
+
+

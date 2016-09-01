@@ -1,0 +1,68 @@
+<ion-view>
+    <!--使用公用的导航显示翻页按钮-->
+    <ion-nav-bar class="bar-clear"></ion-nav-bar>
+    <ion-nav-buttons side="left">
+        <button class="button button-positive button-clear no-animation"
+                ng-click="startApp()" ng-if="!slideIndex">
+            跳过
+        </button>
+        <button class="button button-positive button-clear no-animation"
+                ng-click="previous()" ng-if="slideIndex > 0">
+            上一页
+        </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-positive button-clear no-animation"
+                ng-click="next()" ng-if="slideIndex != 3">
+            下一页
+        </button>
+        <button class="button button-positive button-clear no-animation"
+                ng-click="startApp()" ng-if="slideIndex == 3">
+            开始使用
+        </button>
+    </ion-nav-buttons>
+    <ion-nav-title>
+        <h4>引导页</h4>
+    </ion-nav-title>
+    <ion-content>
+        <ion-slide-box on-slide-changed="slideChanged(index)" id="intro-slider">
+            <ion-slide class="intro-slide">
+                <h3>感谢您使用本app</h3>
+                <div id="intro-logo">
+                    <img ng-src="img/app_icon.png">
+                </div>
+                <p>
+                    我们将继续努力是您感到满意!
+                </p>
+                <p>
+                    请继续支持我们！
+                </p>
+            </ion-slide>
+            <ion-slide class="intro-slide">
+                <h3>使用教程</h3>
+                <div id="intro-list">
+                    <h5>仅仅三步:</h5>
+                    <ol>
+                        <li>打开app</li>
+                        <li>开始浏览</li>
+                        <li>退出app</li>
+                    </ol>
+                </div>
+            </ion-slide>
+            <ion-slide class="intro-slide">
+                <h3>遇到问题?</h3>
+                <p>
+                    您可以留言或联系我们的客服！
+                </p>
+            </ion-slide>
+            <ion-slide class="intro-slide">
+                <h3>感到满意?</h3>
+                <p>
+                    欢迎您投票支持我们
+                </p>
+            </ion-slide>
+        </ion-slide-box>
+    </ion-content>
+</ion-view>
+
+

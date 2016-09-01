@@ -1,0 +1,135 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+//@import
+@import "../www/lib/ionic/scss/ionic";
+
+//sass test
+
+//@extend
+.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+.success {
+  @extend .message;
+  border-color: green;
+}
+.error {
+  @extend .message;
+  border-color: red;
+}
+.warning {
+  @extend .message;
+  border-color: yellow;
+}
+
+//@mixin  @include
+@mixin box-sizing ($sizing) {
+  -webkit-box-sizing:$sizing;
+  -moz-box-sizing:$sizing;
+  box-sizing:$sizing;
+}
+.box-border{
+  border:1px solid #ccc;
+  @include box-sizing(border-box);
+}
+
+
+
+
+body {
+  cursor: url('../img/finger.png'), auto;
+}
+
+.leftlist .item-complex .item-content, .item-radio .item-content {
+  background-color: $energized
+}
+
+
+.slider {
+  height: 200px;
+}
+.slider-slide {
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  font-weight: 300;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+.box{
+  width: 100%;
+  height: 100%;
+}
+.box > img{
+  width: 100%;
+  height: 100%;
+}
+
+
+// hide tabs css
+.tabs {
+  -webkit-transition: all linear 0.2s;
+  transition: all linear 0.2s;
+}
+
+.tabs-item-hide > .tabs{
+  -webkit-transition: all linear 0.2s;
+  transition: all linear 0.2s;
+  bottom: -$tabs-height;
+  display: flex;
+}
+
+
+
+//intro css
+#intro-slider {
+  height: 100%;
+}
+.intro-slide {
+  padding-top: 80px;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  font-weight: 300;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#intro-logo {
+  margin: 30px 0;
+}
+
+#intro-list {
+  margin: 30px auto;
+  width: 170px;
+  font-size: 20px;
+}
+#intro-list ol {
+  margin-top: 30px;
+}
+#intro-list ol li {
+  margin: 10px 0;
+  list-style: decimal;
+  text-align: left;
+}
+
+

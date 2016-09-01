@@ -1,0 +1,38 @@
+<ion-view view-title="列表加载">
+  <ion-content padding="true"  has-bouncing="true">
+    <ion-refresher
+      pulling-text="下拉刷新..."
+      on-refresh="doRefresh()">
+    </ion-refresher>
+    <!--轮播图-->
+    <ion-slide-box on-slide-changed="slideHasChanged($index)" auto-play="true" does-continue="true" slide-interval=2000
+                   show-pager="true" pager-click="pageClick(index)" active-slide="model.activeIndex"
+                   delegate-handle="delegateHandler">
+      <ion-slide>
+        <div class="box blue">
+          <img src="http://img5.imgtn.bdimg.com/it/u=4041718731,746112096&fm=21&gp=0.jpg">
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box yellow">
+          <img src="http://img.iyookee.cn/20150619/20150619_100607_883_670.png">
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box pink">
+          <img src="http://img.iyookee.cn/20150714/20150714_172952_955_22.jpg">
+        </div>
+      </ion-slide>
+    </ion-slide-box>
+    <ion-list>
+      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
+        {{playlist.title}}
+      </ion-item>
+    </ion-list>
+    <ion-infinite-scroll
+      ng-if="moreDataCanBeLoaded()"
+      on-infinite="loadMore()"
+      distance="1%">
+    </ion-infinite-scroll>
+  </ion-content>
+</ion-view>

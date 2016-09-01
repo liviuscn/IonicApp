@@ -1,0 +1,41 @@
+<ion-view view-title="上传图片">
+  <ion-content  padding="true" has-bouncing="true">
+    <div class="list card" >
+      <div class="item item-avatar">
+        <img src="img/ionic.png">
+        <h2>美图欣赏</h2>
+        <p>2016-06-18 09:52</p>
+      </div>
+      <div class="item"  ng-repeat="x in imgSrc">
+        <img class="full-image" ng-src="{{ x }}">
+      </div>
+      <div class="item item-body" >
+        <p>
+         美图喜欢吗？喜欢请分享给大家！
+        </p>
+        <p>
+          <a href="#" class="subdued">1 喜欢</a>
+          <a href="#" class="subdued">5 评论</a>
+          <a href="#" class="subdued">7 分享</a>
+        </p>
+      </div>
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" href="#">
+          <i class="icon ion-thumbsup"></i>
+          喜欢
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-chatbox"></i>
+          评论
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-share"></i>
+          分享
+        </a>
+      </div>
+    </div>
+    <button class="button button-positive button-block" ng-click="choosePicMenu()">
+      选择图片
+    </button>
+  </ion-content>
+</ion-view>

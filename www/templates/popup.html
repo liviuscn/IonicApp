@@ -1,0 +1,16 @@
+<ion-view title="对话框">
+  <ion-content>
+    <button class="button button-dark" ng-click="showPopup()">
+      弹窗显示
+    </button>
+    <button class="button button-primary" ng-click="showConfirm()">
+      确认对话框
+    </button>
+    <button class="button button-positive" ng-click="showAlert()">
+      警告框
+    </button>
+  </ion-content>
+  <script id="popup-template.html" type="text/ng-template">
+    <input ng-model="data.wifi" type="text" placeholder="Password">
+  </script>
+</ion-view>
